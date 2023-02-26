@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         timePicker=findViewById(R.id.timePicker)
         setAlarm=findViewById(R.id.buttonAlarm)
         cancelButton=findViewById(R.id.cancel)
+
         setAlarm.setOnClickListener {
             val calendar:Calendar=Calendar.getInstance()
             if(Build.VERSION.SDK_INT>=23)

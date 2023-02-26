@@ -12,7 +12,7 @@ class MyJobService : JobService() {
     override fun onStartJob(p0: JobParameters?): Boolean {
 
         val i = Intent(this,MyJobService::class.java)
-        val pi = PendingIntent.getBroadcast(this, 0,i,0)
+        val pi = PendingIntent.getBroadcast(this, 0,i,PendingIntent.FLAG_IMMUTABLE)
         val alarmManager=getSystemService(Context.ALARM_SERVICE) as AlarmManager
         alarmManager.set(AlarmManager.RTC_WAKEUP,System.currentTimeMillis(),pi)
         return true

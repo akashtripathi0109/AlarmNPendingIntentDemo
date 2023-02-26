@@ -15,15 +15,18 @@
         android:theme="@style/Theme.AlarmNPendingIntentDemo"
         tools:targetApi="31">
         <activity
-            android:name=".MyNotificationView"
+            android:name=".MyJobServices"
             android:exported="false" />
         <activity
-            android:name=".MyJobServices"
+            android:name=".MyNotificationView"
+
             android:exported="false" />
         <activity
             android:name=".Notification"
             android:exported="false" />
         <activity
+
+
             android:name=".MyNotificationDemo"
 
             android:exported="true">

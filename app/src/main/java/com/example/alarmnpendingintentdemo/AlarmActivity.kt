@@ -23,6 +23,7 @@ class AlarmActivity : AppCompatActivity() {
         var cancel = findViewById<Button>(R.id.cancel)
         var repeat  = findViewById<Button>(R.id.repeat)
         var et = findViewById<EditText>(R.id.time)
+
         val i = Intent(this,BroadCastDemo::class.java)
         var alarmManager : AlarmManager
         val pi = PendingIntent.getBroadcast(this, 0,i,0)

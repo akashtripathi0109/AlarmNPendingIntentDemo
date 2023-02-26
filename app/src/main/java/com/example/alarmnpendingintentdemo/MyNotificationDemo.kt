@@ -34,10 +34,13 @@ class MyNotificationDemo : AppCompatActivity() {
 
 
         bt=findViewById(R.id.btnNotify)
+        notificationManager=getSystemService(Context.NOTIFICATION_SERVICE)as NotificationManager
+
+
         bt.setOnClickListener {
             notificationManager=getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
-            var i= Intent(this, MyNotificationDemo::class.java)
+            var i= Intent(this, MyNotificationView::class.java)
             pendingIntent=PendingIntent.getActivity(this,0,i,PendingIntent.FLAG_UPDATE_CURRENT)
             createMyChannel()
             notificationManager.notify(notificationId,builder.build())
